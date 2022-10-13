@@ -27,26 +27,20 @@ h1, h2, h3, h4, h5, h6, p, ul {
     padding: 0px 0px 0px 0px;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
 .container {
-    width: 1230px;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 1200px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin: 0 auto;
 }
 
 
 /* Розмічаємо хедер сторінки */
-.header {
+.container.header {
     display: flex;
-    align-items: center;
-    border-bottom: 1px solid --border-color;
-
-    border-bottom: 1px solid #ECECEC;
+}
+.header {
+    border: 1px solid --border-color;
 }
 .main-navigation {
     display: flex;
@@ -150,17 +144,17 @@ h1, h2, h3, h4, h5, h6, p, ul {
 {
     list-style-type: none;
 }
-.section-effective-solutions {
-    width: 1600px;
+.hero {
     background-color: var(--accent-background-color);
     text-align: center;
-}
-.container-effective-solutions {
-    padding: 200px 452px;
+    padding: 200px 0;
 }
 .effective-solutions {
-    margin-top: 0;
-    margin-bottom: 30;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    width: 696px;
    
     /* візуальні властивості */
     color: var(--main-background-color);
@@ -200,8 +194,6 @@ cursor: pointer;
 }
 .button-portfolio {
     /* оформлення бокс контейнер */
-    display: inline-block;
-    margin: 0px 8px 0px 0px;
     padding: 6px 22px;
      
     /* Стилізація */
@@ -239,25 +231,21 @@ cursor: pointer;
     text-align: center;
     letter-spacing: 0.03em;
 }
-.strenght-sides {
+.section.strenght-sides {
     background-color:var(--main-team-color);
-}
-.container-strenghts-sides {
-    padding: 94px 0px 0px 0px;
+    padding: 94px 0;
 }
 .strengths {
     display: flex;
-    justify-content: space-between;
-    padding: 0px 0px 0px 0px;
 }
-.strengths .list {
+.strengths .item {
     margin-left: 30px;
 }
-/* .strengths .list:first-child {
+.strengths .item:first-child {
     margin-left: 0px;
-} */
+}
 .main-strengths-title {
-    display: none;
+    visibility: hidden;
 }
 .strengths-title {
     /* оформлення бокс контейнер */
@@ -284,42 +272,67 @@ cursor: pointer;
     letter-spacing: 0.03em;
 }
 /* РОЗМІЧАЄМО "ЩО МИ РОБИМО" */
-.work {
-    background-color: var(--main-team-color)
+.section.what-we-do {
+    margin-bottom: 0px;
+    background-color: var(--main-team-color);
 }
-.container-what-we-do {
-    padding: 94px 0px;
+.container.what-we-do {
+    padding-top: 0px;
 }
 .our-works {
     display: flex;
-    justify-content: space-between;
+}
+.our-works .item {
+    margin-right: 30px;
+}
+.our-works .item:last-child {
+    margin-right: 0px;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 /* Наша команда */
-.our-team {
+.section.our-team {
     background-color: var(--our-team-main-color);
 }
-.container-our-team {
+.container.our-team {
     padding: 94px 0px 94px 0px;
 }
-.team-main-title {
+.main-title {
     /* оформлення бокс контейнер */
     display: block;
     margin-top: 0;
-    margin-bottom: 50;
+    margin-bottom: 50px;
+
+    /* Стилізація */
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
 }
 .participants {
     display: flex;
-    justify-content: space-between;
     margin: 0px;
     padding-left: 0px;
 }
 .members-team {
     background-color: var(--main-background-color);
+    margin-right: 30px;
+}
+.members-team .item {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.members-team:last-child {
+    margin-right: 0px;
 }
 .team-title {
     /* оформлення бокс контейнер */
     margin-top: 0;
-    margin-bottom: 10;
+    margin-bottom: 10px;
 
     /* стилізація */
     color: var(--title-text-color);
@@ -344,20 +357,24 @@ cursor: pointer;
 
 
 /* Розмічаємо Portfolio */
-.main-portfolio-section {
+.section.portfolio {
     padding-top: 100px;
-}
-.container-portfolio {
-    width: 1230px;
+    padding-bottom: 94px;
 }
 .main-projects-title {
-    display: none;
+    visibility: hidden;
 }
 .projects-nav {
     display: flex;
     justify-content: center;
-    margin: 0px 0px 56px 0px;
+    margin: 0px 0px 50px 0px;
     padding: 0px;
+}
+.projects-nav .item {
+    margin-right: 8px;
+}
+.projects-nav .item:last-child {
+    margin-right: 0px;
 }
 .projects-example {
     display: flex;
@@ -365,9 +382,9 @@ cursor: pointer;
     padding: 0px;
     gap: 30px;
 }
-.projects-example .list {
+/* .projects-example .item {
     margin-right: 30px;
-}
+} */
 .projects-example .list:nth-child(3n+3) {
     margin-right: 0px;
 }
@@ -392,22 +409,22 @@ footer {
     background-color: var(--accent-background-color);
 }
 
-.footer-container {
+.container.footer {
     padding-top: 60px;
     padding-bottom: 60px;
 }
 .footer-nav {
     display: block;
     padding: 0px;
-    margin: 0px 0px 0px 0px;
+    margin: 0px;
 }
 
-.footer-nav .list {
+.footer-nav.item {
     display: block;
-    padding: 0px 0px 9px 0px;
+    margin: 0px 0px 9px 0px;
 }
-.footer-nav .list:last-child {
-    padding-bottom: 0px;
+.footer-nav .item:last-child {
+    margin-bottom: 0px;
 }
 .footer-logo {
     display: block;
