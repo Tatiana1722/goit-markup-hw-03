@@ -389,7 +389,8 @@ img {
     gap: 30px;
 }
 .caption-projects-example {
-    margin-left: 24px;
+    padding: 24px 20px;
+    border: 1px solid var(--portfolio-border-color);
 }
 /* .projects-example .item {
     margin-right: 30px;
@@ -397,9 +398,9 @@ img {
 .projects-example .list:nth-child(3n+3) {
     margin-right: 0px;
 }
-.projects-example .item {
+/* .projects-example .item {
     border: 1px solid var(--portfolio-border-color);
-}
+} */
 .projects-title {
     color: var(--title-text-color);
     font-weight: 700;
