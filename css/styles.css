@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 
 /* РОЗМІЧАЄМО ХЕДЕР СТОРІНКИ */
-.container.header {
+.container.head {
     display: flex;
 }
 .header {
@@ -205,10 +205,13 @@ cursor: pointer;
     letter-spacing: 0.03em;
 }
 
-.button-portfolio:hover, .button-portfolio:active, .button-portfolio:focus,
 .button-main:hover, .button-main:active, .button-main:focus {
     background-color: var(--accent-color);
     color: var(--main-background-color);
+}
+.button-main:hover
+{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* РОЗМІЧАЄМО СИЛЬНІ СТОРОНИ */
@@ -343,7 +346,7 @@ img {
 
 /* Розмічаємо Portfolio */
 .section.portfolio {
-    padding-top: 100px;
+    padding-top: 94px;
     padding-bottom: 94px;
 }
 .main-projects-title {
@@ -354,6 +357,17 @@ img {
     justify-content: center;
     margin: 0px 0px 50px 0px;
     padding: 0px;
+}
+
+.button-portfolio:hover,
+.button-portfolio:active,
+.button-portfolio:focus {
+    color: var(--main-background-color);
+    background-color: var(--accent-color);
+}
+.button-portfolio:hover {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
 }
 .projects-nav .item {
     margin-right: 8px;
@@ -373,15 +387,11 @@ img {
     border-right: 1px solid var(--portfolio-border-color);
     border-bottom: 1px solid var(--portfolio-border-color);
 }
-/* .projects-example .item {
-    margin-right: 30px;
-} */
+
 .projects-example .list:nth-child(3n+3) {
     margin-right: 0px;
 }
-/* .projects-example .item {
-    border: 1px solid var(--portfolio-border-color);
-} */
+
 .projects-title {
     color: var(--title-text-color);
     font-weight: 700;
